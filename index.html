@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,30 +35,52 @@
 <main id="top">
 
   <section class="hero" id="about">
-    <div class="hero-inner">
-      <p class="hero-eyebrow reveal-item">Portfolio</p>
-      <div class="hero-name-wrap reveal-item">
-        <h1 class="hero-name">Tina Keita Paegle</h1>
-        <svg class="name-underline" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M2 12 C 80 3, 160 19, 240 9 S 362 3, 398 11" />
-        </svg>
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal-item">Portfolio</p>
+        <div class="hero-name-wrap reveal-item">
+          <h1 class="hero-name">Tina Keita Paegle</h1>
+          <svg class="name-underline" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M2 12 C 80 3, 160 19, 240 9 S 362 3, 398 11" />
+          </svg>
+        </div>
+        <p class="hero-desc reveal-item">
+          I’m a student at Vidzeme Technology and Design vocational school, focused on software 
+          development and currently based in Cēsis, Latvia. I’m applying for an internship as a
+          programming technician to turn my classroom knowledge into hands-on experience.
+           I’m motivated, quick to learn, and eager to work on real-world tasks such as debugging, 
+           small features, and testing. I’m especially interested in environments where I can receive feedback, 
+           improve my coding practices, and grow into a reliable junior developer.
+        </p>
+        <div class="hero-meta reveal-item">
+          <span>Based in — Cēsis, Latvia</span>
+          <span>Open to — Experience </span>
+        </div>
       </div>
-      <p class="hero-desc reveal-item">
-        I’m a student at Vidzeme Technology and Design vocational school, focused on software 
-        development and currently based in Cēsis, Latvia. I’m applying for an internship as a
-        programming technician to turn my classroom knowledge into hands-on experience.
-         I’m motivated, quick to learn, and eager to work on real-world tasks such as debugging, 
-         small features, and testing. I’m especially interested in environments where I can receive feedback, 
-         improve my coding practices, and grow into a reliable junior developer.
-      </p>
-      <div class="hero-meta reveal-item">
-        <span>Based in — Cēsis, Latvia</span>
-        <span>Open to — Experience </span>
+
+      <div class="code-card reveal-item" aria-hidden="true">
+        <div class="code-card-bar">
+          <span class="code-dot red"></span>
+          <span class="code-dot amber"></span>
+          <span class="code-dot green"></span>
+          <span class="code-card-label">about-me.js</span>
+        </div>
+        <pre><span class="tok-kw">const</span> <span class="tok-plain">student</span> <span class="tok-punc">=</span> <span class="tok-punc">{</span>
+  <span class="tok-prop">name</span><span class="tok-punc">:</span> <span class="tok-str">'Tīna Keita Paegle'</span><span class="tok-punc">,</span>
+  <span class="tok-prop">school</span><span class="tok-punc">:</span> <span class="tok-str">'Vidzeme TD School'</span><span class="tok-punc">,</span>
+  <span class="tok-prop">focus</span><span class="tok-punc">:</span> <span class="tok-str">'Web Development'</span><span class="tok-punc">,</span>
+  <span class="tok-prop">status</span><span class="tok-punc">:</span> <span class="tok-str">'seeking_internship'</span><span class="tok-punc">,</span>
+<span class="tok-punc">};</span><span class="code-cursor"></span></pre>
       </div>
     </div>
+
+    <a href="#skills" class="scroll-hint reveal-item" aria-label="Scroll to explore">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+    </a>
   </section>
 
-  <section class="stats fade-in" aria-label="Quick facts">
+   <section class="stats fade-in" aria-label="Quick facts">
     <div class="stats-inner">
       <div class="stat">
         <span class="stat-num">3+</span>
@@ -69,12 +91,12 @@
         <span class="stat-label">Projects made</span>
       </div>
       <div class="stat">
-        <span class="stat-num">8</span>
+        <span class="stat-num">8/10</span>
         <span class="stat-label">Average grade</span>
       </div>
       <div class="stat">
-        <span class="stat-num">100%</span>
-        <span class="stat-label">Genuinely enjoy this</span>
+        <span class="stat-num">150+</span>
+        <span class="stat-label">Hours of self-driven practice</span>
       </div>
     </div>
   </section>
@@ -88,7 +110,7 @@
       <li>CSS</li>
       <li>JavaScript</li>
       <li>Laravel</li>
-      <li>MySql</li>
+      <li>MySQL</li>
       <li>PHP</li>
       <li>Git</li>
     </ul>
@@ -100,8 +122,24 @@
   </div>
 
   <!-- Project One -->
-  <!-- Project One -->
 <article class="project fade-in">
+  <div class="project-media">
+    <div class="media-frame">
+      <img src="Screenshot 2026-09-03 142600.png" alt="Dance Inventory System preview" loading="lazy">
+    </div>
+  </div>
+  <div class="project-info">
+    <h3>Dance Inventory System</h3>
+    <p class="project-tags">Diploma Thesis — Prototype</p>
+    <p class="project-desc">
+      A prototype system for dance groups to manage costume and prop inventory by scanning QR codes attached to each item.
+      Items can be assigned to specific dancers, allowing teachers to track where each piece is, how many there are, and which groups or performances they belong to.
+    </p>
+  </div>
+</article>
+
+  <!-- Project Two -->
+<article class="project reverse fade-in">
   <div class="project-media">
     <div class="media-frame">
       <img src="Screenshot 2026-09-03 141118.png" alt="Mystery Meal preview" loading="lazy">
@@ -117,8 +155,8 @@
   </div>
 </article>
 
-<!-- Project Two -->
-<article class="project reverse fade-in">
+<!-- Project Three -->
+<article class="project fade-in">
   <div class="project-media">
     <div class="media-frame">
       <img
@@ -134,23 +172,6 @@
     <p class="project-desc">
       A simple to‑do app where you can create tasks, organize them into lists, and view them in a calendar.
       It focuses on clear structure and easy daily planning, so you can quickly see what’s due and keep track of your progress.
-    </p>
-  </div>
-</article>
-
-<!-- Project Three -->
-<article class="project fade-in">
-  <div class="project-media">
-    <div class="media-frame">
-      <img src="Screenshot 2026-09-03 142600.png" alt="Dance Inventory System preview" loading="lazy">
-    </div>
-  </div>
-  <div class="project-info">
-    <h3>Dance Inventory System</h3>
-    <p class="project-tags">Diploma Thesis — Prototype</p>
-    <p class="project-desc">
-      A prototype system for dance groups to manage costume and prop inventory by scanning QR codes attached to each item.
-      Items can be assigned to specific dancers, allowing teachers to track where each piece is, how many there are, and which groups or performances they belong to.
     </p>
   </div>
 </article>
