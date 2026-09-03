@@ -1,244 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Tīna Paegle — Software Builder</title>
-
-    <meta
-        name="description"
-        content="Portfolio of Tīna Paegle, a student and software builder from Riga."
-    >
-
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tīna Keita Paegle — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <a class="logo" href="#top">Tīna<span>.</span></a>
 
-        <nav class="navigation" aria-label="Main navigation">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+<div class="grain"></div>
+<div class="dot-grid"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
 
-        <a
-            class="github-link"
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            GitHub ↗
-        </a>
-    </header>
+<header class="site-header" id="siteHeader">
+  <div class="nav-pill" id="navPill">
+    <a href="#top" class="mark magnetic">TKP</a>
+    <nav class="site-nav" id="siteNav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+    <a href="#contact" class="nav-cta magnetic">Say hi</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <main id="top">
-        <section class="hero">
-            <div class="hero-meta">
-                <span>Portfolio / 2026</span>
-                <span>Riga, Latvia</span>
-            </div>
+<main id="top">
 
-            <div class="hero-content">
-                <p class="eyebrow">Student · Software builder</p>
-
-                <h1>
-                    Making useful things,
-                    <em>one idea at a time.</em>
-                </h1>
-
-                <div class="hero-footer">
-                    <p>
-                        I am Tīna, a vocational school student learning to build
-                        thoughtful, practical, and simple digital experiences.
-                    </p>
-
-                    <a class="circle-link" href="#work" aria-label="View projects">
-                        ↓
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="work" class="section work-section">
-            <div class="section-heading">
-                <p class="eyebrow">Selected work</p>
-                <span class="section-index">01 — 03</span>
-            </div>
-
-            <div class="projects">
-                <article class="project">
-                    <div class="project-number">01</div>
-
-                    <div class="project-media">
-                        <img
-                            src="images/task-manager.jpg"
-                            alt="Task Manager project preview"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="project-content">
-                        <div>
-                            <p class="project-category">Web application</p>
-                            <h2>Task Manager</h2>
-                        </div>
-
-                        <p class="project-description">
-                            A focused tool for organizing school assignments
-                            and everyday tasks.
-                        </p>
-
-                        <button
-                            class="project-button"
-                            type="button"
-                            data-project="task-manager"
-                        >
-                            View project <span>↗</span>
-                        </button>
-                    </div>
-                </article>
-
-                <article class="project">
-                    <div class="project-number">02</div>
-
-                    <div class="project-media">
-                        <img
-                            src="images/weather-app.jpg"
-                            alt="Weather App project preview"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="project-content">
-                        <div>
-                            <p class="project-category">API project</p>
-                            <h2>Weather App</h2>
-                        </div>
-
-                        <p class="project-description">
-                            A quiet interface for turning live weather data
-                            into something easy to understand.
-                        </p>
-
-                        <button
-                            class="project-button"
-                            type="button"
-                            data-project="weather-app"
-                        >
-                            View project <span>↗</span>
-                        </button>
-                    </div>
-                </article>
-
-                <article class="project">
-                    <div class="project-number">03</div>
-
-                    <div class="project-media">
-                        <img
-                            src="images/school-library.jpg"
-                            alt="School Library project preview"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="project-content">
-                        <div>
-                            <p class="project-category">Management system</p>
-                            <h2>School Library</h2>
-                        </div>
-
-                        <p class="project-description">
-                            A small system for managing books, borrowers,
-                            and availability.
-                        </p>
-
-                        <button
-                            class="project-button"
-                            type="button"
-                            data-project="school-library"
-                        >
-                            View project <span>↗</span>
-                        </button>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="about" class="section about-section">
-            <div class="about-label">
-                <p class="eyebrow">About me</p>
-            </div>
-
-            <div class="about-content">
-                <h2>
-                    Curious about how things work
-                    <span>and determined to build them better.</span>
-                </h2>
-
-                <p>
-                    I am currently studying software development at vocational
-                    school. I like taking an idea, breaking it into smaller
-                    pieces, and turning it into something people can actually use.
-                </p>
-
-                <div class="skills">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>PHP</span>
-                    <span>Git</span>
-                    <span>SQL</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <p class="eyebrow">Contact</p>
-
-            <h2>Let’s make something useful.</h2>
-
-            <a class="email-link" href="mailto:your.email@example.com">
-                your.email@example.com ↗
-            </a>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <span>© 2026 Tīna Paegle</span>
-        <span>Built from scratch</span>
-    </footer>
-
-    <div class="project-modal" aria-hidden="true">
-        <div class="modal-backdrop"></div>
-
-        <div
-            class="modal-window"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="modal-title"
-        >
-            <button class="modal-close" type="button" aria-label="Close project">
-                ×
-            </button>
-
-            <div class="modal-video">
-                <video id="modal-video" controls playsinline>
-                    <source id="modal-video-source" src="" type="video/mp4">
-                    Your browser does not support video playback.
-                </video>
-            </div>
-
-            <div class="modal-info">
-                <p id="modal-category" class="project-category"></p>
-                <h2 id="modal-title"></h2>
-                <p id="modal-description"></p>
-
-                <div id="modal-tags" class="modal-tags"></div>
-            </div>
-        </div>
+  <section class="hero" id="about">
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal-item">Portfolio</p>
+      <div class="hero-name-wrap reveal-item">
+        <h1 class="hero-name">Tīna Keita Paegle</h1>
+        <svg class="name-underline" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M2 12 C 80 3, 160 19, 240 9 S 362 3, 398 11" />
+        </svg>
+      </div>
+      <p class="hero-desc reveal-item">
+        I’m a student at Vidzeme Technology and Design vocational school, focused on software 
+        development and currently based in Cēsis, Latvia. I’m applying for an internship as a
+        programming technician to turn my classroom knowledge into hands-on experience.
+         I’m motivated, quick to learn, and eager to work on real-world tasks such as debugging, 
+         small features, and testing. I’m especially interested in environments where I can receive feedback, 
+         improve my coding practices, and grow into a reliable junior developer.
+      </p>
+      <div class="hero-meta reveal-item">
+        <span>Based in — Cēsis, Latvia</span>
+        <span>Open to — Experience </span>
+      </div>
     </div>
+  </section>
+
+  <section class="stats fade-in" aria-label="Quick facts">
+    <div class="stats-inner">
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Years studying</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">25+</span>
+        <span class="stat-label">Projects made</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Average grade</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Genuinely enjoy this</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="section-head fade-in">
+      <h2>What I work with</h2>
+    </div>
+    <ul class="skills-list fade-in">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Laravel</li>
+      <li>MySql</li>
+      <li>PHP</li>
+      <li>Git</li>
+    </ul>
+  </section>
+
+  <section class="work" id="work">
+  <div class="section-head fade-in">
+    <h2>Selected work</h2>
+  </div>
+
+  <!-- Project One -->
+  <!-- Project One -->
+<article class="project fade-in">
+  <div class="project-media">
+    <div class="media-frame">
+      <img src="Screenshot 2026-09-03 141118.png" alt="Mystery Meal preview" loading="lazy">
+    </div>
+  </div>
+  <div class="project-info">
+    <h3>Mystery Meal</h3>
+    <p class="project-tags">Web App — Personal Project</p>
+    <p class="project-desc">
+      Mystery Meal lets you select ingredients you already have at home and instantly shows real recipes you can make.
+      It also highlights which additional ingredients you’d need to complete each dish, helping you cook with less waste and fewer trips to the store.
+    </p>
+  </div>
+</article>
+
+<!-- Project Two -->
+<article class="project reverse fade-in">
+  <div class="project-media">
+    <div class="media-frame">
+      <img
+        src="Screenshot 2026-09-03 135854.png"
+        alt="To‑Do List preview"
+        loading="lazy"
+      >
+    </div>
+  </div>
+  <div class="project-info">
+    <h3>To‑Do List</h3>
+    <p class="project-tags">Web App — Personal Project</p>
+    <p class="project-desc">
+      A simple to‑do app where you can create tasks, organize them into lists, and view them in a calendar.
+      It focuses on clear structure and easy daily planning, so you can quickly see what’s due and keep track of your progress.
+    </p>
+  </div>
+</article>
+
+<!-- Project Three -->
+<article class="project fade-in">
+  <div class="project-media">
+    <div class="media-frame">
+      <img src="Screenshot 2026-09-03 142600.png" alt="Dance Inventory System preview" loading="lazy">
+    </div>
+  </div>
+  <div class="project-info">
+    <h3>Dance Inventory System</h3>
+    <p class="project-tags">Diploma Thesis — Prototype</p>
+    <p class="project-desc">
+      A prototype system for dance groups to manage costume and prop inventory by scanning QR codes attached to each item.
+      Items can be assigned to specific dancers, allowing teachers to track where each piece is, how many there are, and which groups or performances they belong to.
+    </p>
+  </div>
+</article>
+</section>
+
+<section class="contact fade-in" id="contact">
+  <h2>Let’s talk</h2>
+  <p>
+    I’m currently looking for an internship as a programming technician.
+    If you have an opportunity, a question about my work, or just want to say hi,
+    I’d be happy to hear from you.
+  </p>
+
+  <h3>• ipb23.t.paegle@vtdt.edu.lv</h3><br>
+
+  <div class="contact-links" style="border-bottom:1px solid var(--line-strong); display:inline-flex; gap:1.75rem;">
+    <a href="https://github.com/TinaKeita" target="_blank" rel="noopener">GitHub</a>
+    <a href="Tīna_Keita_Paegle (3).pdf" target="_blank" rel="noopener">CV / Resume</a>
+    <a href="#work">Selected projects</a>
+  </div>
+
+  <p style="margin-top:1.25rem; font-size:0.92rem; color:var(--text-dim);">
+    Based in Cēsis, Latvia · Open to on-site and remote internships
+  </p>
+
+  <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-dim);">
+    Preferred contact: email · Typical reply time: 1–2 days
+  </p>
+
+  <p style="margin-top:1rem; font-size:0.8rem; color:var(--text-dim); opacity:0.7;">
+    Languages: Latvian (native), English (able to work) 
+  </p>
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Tīna Keita Paegle. Built with HTML, CSS, PHP</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
