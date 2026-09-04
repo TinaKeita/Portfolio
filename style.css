@@ -587,25 +587,51 @@ img { max-width: 100%; display: block; }
   perspective: 900px;
 }
 
+/* Offset accent panel peeking out behind the frame */
+.project-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(14px, 14px);
+  border-radius: 10px;
+  border: 1px solid var(--accent-2);
+  opacity: 0.4;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.project.reverse .project-media::before {
+  transform: translate(-14px, 14px);
+}
+
+.project-media:hover::before {
+  transform: translate(0, 0);
+  opacity: 0.7;
+}
+
 .media-frame {
   position: relative;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 10px;
   border: 1px solid var(--line-strong);
   background: var(--bg-panel-2);
+  padding: 8px;
   cursor: pointer;
   transform-style: preserve-3d;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .media-frame:hover {
-  border-color: var(--line-strong);
+  border-color: var(--accent-2);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45);
 }
 
 .media-frame img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  border-radius: 5px;
   transition: transform 0.5s ease;
   display: block;
 }
