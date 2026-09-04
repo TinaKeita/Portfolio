@@ -71,6 +71,22 @@ window.addEventListener('resize', () => {
   if (active) moveIndicatorTo(active);
 });
 
+// ---------- Highlight the "Say hi" button when the contact section is in view ----------
+const navCta = document.querySelector('.nav-cta');
+const contactSection = document.getElementById('contact');
+
+if ('IntersectionObserver' in window && navCta && contactSection) {
+  const ctaObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        navCta.classList.toggle('at-contact', entry.isIntersecting);
+      });
+    },
+    { threshold: 0.35 }
+  );
+  ctaObserver.observe(contactSection);
+}
+
 // ---------- Fade content in and out as it scrolls through view ----------
 const fadeEls = document.querySelectorAll('.fade-in');
 
