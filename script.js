@@ -87,6 +87,53 @@ if ('IntersectionObserver' in window && navCta && contactSection) {
   ctaObserver.observe(contactSection);
 }
 
+// ---------- Video lightbox for project previews ----------
+const videoLightbox = document.getElementById('videoLightbox');
+const lightboxVideo = document.getElementById('lightboxVideo');
+const lightboxClose = document.querySelector('.video-lightbox-close');
+
+function openVideoLightbox(src) {
+  if (!videoLightbox || !lightboxVideo) return;
+  lightboxVideo.src = src;
+  videoLightbox.classList.add('open');
+  videoLightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  lightboxVideo.play().catch(() => {});
+}
+
+function closeVideoLightbox() {
+  if (!videoLightbox || !lightboxVideo) return;
+  videoLightbox.classList.remove('open');
+  videoLightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  lightboxVideo.pause();
+  lightboxVideo.removeAttribute('src');
+  lightboxVideo.load();
+}
+
+document.querySelectorAll('.media-frame[data-video]').forEach(frame => {
+  const playBtn = frame.querySelector('.media-play');
+  if (playBtn) {
+    playBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      openVideoLightbox(frame.dataset.video);
+    });
+  }
+});
+
+if (videoLightbox) {
+  videoLightbox.addEventListener('click', closeVideoLightbox);
+}
+if (lightboxClose) {
+  lightboxClose.addEventListener('click', e => {
+    e.stopPropagation();
+    closeVideoLightbox();
+  });
+}
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeVideoLightbox();
+});
+
 // ---------- Fade content in and out as it scrolls through view ----------
 const fadeEls = document.querySelectorAll('.fade-in');
 
